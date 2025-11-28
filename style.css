@@ -254,6 +254,12 @@ h2 {
     margin-bottom: 15 px;
 }
 
+.li_proect1::after {
+    /*к проекту */
+    content: 'REDREDRED 😈';
+    color: red;
+    padding-left: 1em;
+}
 
 /* Для мобильных устройств */
 @media (max-width=600px) {
@@ -272,5 +278,6 @@ h2 {
         width: 20%;
     }
 }
+
 
 
