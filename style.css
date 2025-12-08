@@ -5,22 +5,30 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     /* Цветовая система */
 
     /* ТЕКСТ */
-    --color-text-cream: #f8f8f2; /* Кремовый текст */
-    --color-text-stone-700: #2d3031;     /* Тёмно-серый текст */
-    --color-text-deep-navy: #0a192f;    /* Глубокий базовый */
+    --color-text-cream: #f8f8f2;
+    /* Кремовый текст */
+    --color-text-stone-700: #2d3031;
+    /* Тёмно-серый текст */
+    --color-text-deep-navy: #0a192f;
+    /* Глубокий базовый */
     /* АКЦЕНТЫ */
-    --color-electric-pink: #b1356b; /* Яркий акцент - БУНТ */
-    --color-muted-gold: #d4af37; /* Элегантный акцент - ЭСТЕТ */
-    --color-stone-900: #1c1917;    /* Чёрный для акцентов */
+    --color-electric-pink: #b1356b;
+    /* Яркий акцент - БУНТ */
+    --color-muted-gold: #d4af37;
+    /* Элегантный акцент - ЭСТЕТ */
+    --color-stone-900: #1c1917;
+    /* Чёрный для акцентов */
     /* ФОНЫ */
-    --color-background-stone-50: #d7dce2;    /* Светло-серый фон */
-    --color-background-stone-100: #c4ccd3;    /* Светло-серый фон блоков*/
+    --color-background-stone-50: #d7dce2;
+    /* Светло-серый фон */
+    --color-background-stone-100: #cccfd3;
+    /* Светло-серый фон блоков*/
 
-/* Дополнительные переменные для консистентности */
+    /* Дополнительные переменные для консистентности */
     --border-radius: 10px;
     --transition: all 0.3s ease;
     --box-shadow: 0 4px 6px var(--color-electric-pink);
@@ -34,9 +42,10 @@ body {
     line-height: 1.6;
     color: var(--color-text-stone-700);
     background-color: var(--color-background-stone-50);
-    
+
     max-width: 800px;
-    }
+}
+
 header,
 section,
 footer {
@@ -53,10 +62,12 @@ h2 {
     color: var(--color-text-deep-navy);
     margin-bottom: 15px;
 }
+
 h2:hover {
     font-style: italic;
     transform: rotate(-1deg);
 }
+
 .esthetic-rebel-title {
     font-family: 'Playfair Display', serif;
     /* Эстетика */
@@ -76,13 +87,14 @@ h2:hover {
     transform: scale(1.05);
     /* Легкое увеличение при наведении */
 }
+
 .flex1 {
-    
+
     padding: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
-    
+
 }
 
 /*КРЕДО_БЛОК*/
@@ -147,7 +159,7 @@ h2:hover {
     height: 3px;
     background: linear-gradient(90deg,
             transparent,
-            var(--accent-color),
+            var(--color-electric-pink),
             transparent);
 }
 
@@ -196,12 +208,31 @@ h2:hover {
 
 /*конец КРЕДО_БЛОКа*/
 
+.skills ul {
+    list-style: none;
+}
+
+.skills li {
+    background: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.skills li:hover {
+    background: var(--stone-700);
+    color: var(--spark);
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
 .li_proect1::after {
     /*к проекту */
     content: 'RED-RED-RED 😈';
     color: red;
     padding-left: 1em;
 }
+
 /* Для мобильных устройств */
 @media (max-width: 600px) {
     body {
@@ -213,9 +244,10 @@ h2:hover {
     footer {
         margin: 10px 0;
         padding: 20px;
-        
+
 
     }
+
     img {
         width: 20%;
     }
