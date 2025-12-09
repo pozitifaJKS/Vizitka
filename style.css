@@ -9,29 +9,42 @@
     /* Цветовая система */
 
     /* ТЕКСТ */
-    --color-text-cream: #f8f8f2;
+    --color-text-cream: hwb(60deg 95% 2%);
     /* Кремовый текст */
-    --color-text-stone-700: #2d3031;
+    --color-text-stone-700: hwb(210deg 15% 85%);
     /* Тёмно-серый текст */
-    --color-text-deep-navy: #0a192f;
+    --color-text-deep-navy: hwb(230 17% 72%);
     /* Глубокий базовый */
     /* АКЦЕНТЫ */
-    --color-electric-pink: #b1356b;
+    --color-electric-pink: hwb(334deg 18% 10% / 0.831);
     /* Яркий акцент - БУНТ */
-    --color-muted-gold: #d4af37;
+    --color-muted-gold: hwb(48 45% 15% / 0.978);
     /* Элегантный акцент - ЭСТЕТ */
     --color-stone-900: #1c1917;
     /* Чёрный для акцентов */
     /* ФОНЫ */
-    --color-background-stone-50: #d7dce2;
-    /* Светло-серый фон */
-    --color-background-stone-100: #cccfd3;
-    /* Светло-серый фон блоков*/
+    --color-background-cream1: hwb(30 75% 24%);
 
+    --color-background-stone-50: hwb(0 75% 25%);
+    /* Светло-серый фон */
+    --color-background-stone-100: hwb(0 70% 30%);
+    /* Светло-серый фон блоков*/
+    /* Тоновая шкала для electric-pink */
+    --pink-100: hwb(334 40% 0%);
+    /* Самый светлый */
+    --pink-200: hwb(334 30% 5%);
+    --pink-300: hwb(334 20% 8%);
+    /* Базовый */
+    --pink-400: hwb(334 10% 15%);
+    /* Более насыщенный */
+    --pink-500: hwb(334 0% 20%);
+    /* Самый тёмный */
     /* Дополнительные переменные для консистентности */
     --border-radius: 10px;
     --transition: all 0.3s ease;
     --box-shadow: 0 4px 6px var(--color-electric-pink);
+    --box-shadow2: 0 2px 14px var(--color-muted-gold);
+    --box-shadow3: 0 2px 14px var(--pink-500);
 }
 
 body {
@@ -44,6 +57,7 @@ body {
     background-color: var(--color-background-stone-50);
 
     max-width: 800px;
+
 }
 
 header,
@@ -61,12 +75,14 @@ h2 {
     font-family: 'Courier New', monospace;
     color: var(--color-text-deep-navy);
     margin-bottom: 15px;
-}
-
-h2:hover {
-    font-style: italic;
     transform: rotate(-1deg);
 }
+
+
+/* hr.rebel-divider+h2:hover {
+    font-style: italic;
+    transform: rotate(-18deg);
+} */
 
 .esthetic-rebel-title {
     font-family: 'Playfair Display', serif;
@@ -100,15 +116,17 @@ h2:hover {
 /*КРЕДО_БЛОК*/
 .credo-section {
     padding: 60px 20px;
-    background: linear-gradient(135deg, var(--bg-color) 0%, rgba(248, 248, 242, 0.1) 100%);
     border-top: 1px solid var(--shadow);
     border-bottom: 1px solid var(--shadow);
+    background-color: var(--color-background-cream1);
 }
+
 
 .credo-container {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+
 }
 
 .esthetic-credo {
@@ -213,17 +231,25 @@ h2:hover {
 }
 
 .skills li {
-    background: #e9ecef;
+    background: var(--color-background-cream1);
     margin: 5px 0;
     padding: 10px;
     border-radius: 4px;
+
 }
 
 .skills li:hover {
-    background: var(--stone-700);
-    color: var(--spark);
+    background-color: var(--color-text-deep-navy);
+    color: var(--color-muted-gold);
     transform: translateX(5px);
     transition: all 0.3s ease;
+    box-shadow: var(--box-shadow2);
+}
+
+.skills li:has(+ li:hover) {
+
+    box-shadow: var(--box-shadow3);
+    transition: 2s;
 }
 
 .li_proect1::after {
