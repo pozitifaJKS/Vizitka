@@ -62,7 +62,7 @@ body {
 
 header,
 section,
-footer {
+footer, blockquote {
     margin: 20px 0;
     padding: 30px;
 
@@ -84,6 +84,11 @@ h2 {
     transform: rotate(-18deg);
 } */
 
+.metaphor {
+        font-style: italic;
+        color: #7c3aed; /* Фиолетовый для акцента */
+        font-weight: 500;}
+        
 .esthetic-rebel-title {
     font-family: 'Playfair Display', serif;
     /* Эстетика */
@@ -250,6 +255,12 @@ h2 {
 
     box-shadow: var(--box-shadow3);
     transition: 2s;
+}
+
+li.princip:hover li{
+    color: var(--color-text-deep-navy);
+    background-color: var(--color-muted-gold);
+    box-shadow: none;
 }
 
 .li_proect1::after {
